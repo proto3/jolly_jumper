@@ -1,11 +1,4 @@
-line = raw_input()
-
-words = line.split()
-
-numbers = [int(i) for i in words]
-
-diff = [i-j for i,j in zip(numbers[:-1], numbers[1:])]
-
+words = raw_input().split()
+diff = [int(a)-int(b) for a, b in zip(words[:-1], words[1:])]
 diff.sort()
-
-print(range(1, len(numbers)) == diff)
+print(range(1, len(words)) == diff)
